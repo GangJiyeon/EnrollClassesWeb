@@ -1,0 +1,62 @@
+#date1,#date2,#now{
+    size: 10px!important;
+}
+div#subCon4{
+
+    text-align: center!important;
+}
+.subTitle{
+    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 0px;
+}
+#goToEnroll{
+    background-color: lightsteelblue;
+    border: none;
+    padding: 20px 40px;
+    margin: 10px;
+}
+.subContent{
+    padding: 15px;
+    border: solid 1px rgb(227, 227, 227);
+}
+hr{
+    padding-top: 20px;
+    color: lightsteelblue;
+}
+div#go.subTitle{
+    text-align: left;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+#subCon3{
+    padding: 15px;
+    border: solid 1px rgb(227, 227, 227);
+}
+#subCon4{
+    padding: 15px;
+    border: solid 1px rgb(227, 227, 227);
+    height: 100%;
+    margin: 10px 0px;
+}
+
+#doit{
+    margin: 20px 0px;
+    font-size: 28px;
+}
+div#loginArea{
+    margin: 10px 0px;
+}
+#subCon5{
+    font-size: 15px;
+}
+div.infoTitle{
+    font-size: 30px;
+    margin: 30px 0px;
+}

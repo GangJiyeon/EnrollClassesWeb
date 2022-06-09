@@ -1,0 +1,19 @@
+#userInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    
+}
+main{
+    
+}
+.title{
+    font-size: 30px;
+    padding: 20px 0px;
+    margin: 0px 12px;
+    border-top: solid 3px lightsteelblue;
+}
+.smallTitle{
+    font-size: 20px;
+    padding: 10px 0px;
+}

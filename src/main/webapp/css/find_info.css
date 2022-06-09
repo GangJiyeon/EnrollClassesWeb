@@ -1,0 +1,55 @@
+#loginArea1,#loginArea2{
+    margin: 60px;
+    border-top: solid lightsteelblue 3px;
+    border-bottom: solid lightsteelblue 3px;
+    text-align: center;
+    padding: 50px 250px;
+}
+#serviceTitle1,#serviceTitle2{
+    font-size: 30px;
+}
+#serviceArea1,#serviceArea2,form{
+    margin: 30px 100px;
+    border-bottom: solid 1px rgb(215, 215, 215);
+
+}
+#serviceArea1,#serviceArea2{
+    padding: 20px;
+}
+
+form{
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+
+}
+button{
+    width: 350px;
+    height: 60px;
+    background-color: lightsteelblue;
+    box-shadow: none;
+    border: none;
+    color: white;
+    margin: 0px 0px 20px 0px;
+}
+
+#inputArea1,#inputArea2{
+    margin: 20px 0px;
+}
+input#id,input#password{
+    height: 60px;
+    width: 350px;
+    padding: 0px 20px;
+    margin: 3px 0px;
+    border: solid 1px rgb(215, 215, 215);
+
+}
+i.bi.bi-person-fill{
+    font-size: 35px;
+}
+a #find_id,a #find_pw{
+    margin: 0px 10px;
+    color: black!important;
+
+}

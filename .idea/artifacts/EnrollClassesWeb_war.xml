@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EnrollClassesWeb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>EnrollClassesWeb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="EnrollClassesWeb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="EnrollClassesWeb:war exploded" />
+    </root>
+  </artifact>
+</component>

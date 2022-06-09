@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#showoption,#hideoption{
+    width: 1.2rem!important;
+    height: 6rem;
+    color: white;
+    background-color: rgba(158, 176, 201);
+    position: fixed;
+    top: 0px;
+    left: 7.5em;
+    list-style: none;
+    z-index: 999;
+}
+a#showoption.link-dark.text-decoration-none li{
+   padding: 34px 1px 34px 3px!important;
+}
+a#hideoption.link-dark.text-decoration-none li{
+    padding: 34px 1px 34px 1px!important;
+}

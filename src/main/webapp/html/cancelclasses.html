@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강신청 취소하기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <script src="/js/login.js"></script>
+    <script src="/js/side.js"></script>
+    <link rel="stylesheet" href="/css/side_menu.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/enroll_classes.css">
+</head>
+<body>
+    <a href="#" id="hideoption" class="link-dark text-decoration-none">
+       <li class="nav-item" id="hideparentSpan">
+           <span id="hidebtn">◀</span>
+       </li>
+    </a>
+    <a href="#" id="showoption" class="link-dark text-decoration-none">
+        <li class="nav-item" id="showparentSpan">
+            <span id="showbtn">▶</span>
+        </li>
+    </a>
+    <header class="py-3 mb-4 border-bottom">
+        
+        <div id="header" class="container d-flex flex-wrap justify-content-center">
+            <a href="/html/main.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                <span class="fs-4"><i class="bi bi-mortarboard-fill"></i>어쩌고 대학교 수강신청</span>
+            </a>
+        </div>
+    </header>
+    
+    <nav id="nav">
+        <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 7.5rem;" id="side_bar">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <a href="#" class="d-block p-3 link-dark text-decoration-none">
+                    <li class="nav-item" id="menu1">
+                        <i class="bi bi-bank2"></i></i><br>
+                        <span>어쩌고 대학교</span>
+                    </li>
+                </a>
+                <div>
+                    <a href="/html/login.html" class="d-block p-3 link-dark text-decoration-none" id="main_nav">
+                        <li class="nav-item" id="menu2">
+                            <span>로그인</span>
+                            <span>▼</span>
+                        </li>
+                    </a>
+                    <div id="sub">
+                        <div id="sub_menu">
+                            <a href="/html/enroll_classes.html?page=sub" class="d-block p-3 link-dark text-decoration-none">
+                                <li class="nav-item" id="menu2_1">
+                                    <span>수강신청하기</span>
+                                </li>
+                            </a>
+                            <a href="/html/cancelclasses.html?page=sub" class="d-block p-3 link-dark text-decoration-none">
+                                <li class="nav-item" id="menu2_2">
+                                    <span>수강신청취소</span>
+                                </li>
+                            </a>
+                            <a href="/html/userinfo.html?page=sub" class="d-block p-3 link-dark text-decoration-none">
+                                <li class="nav-item" id="menu2_3">
+                                    <span>수강신청내역</span>
+                                </li>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/html/notice.html" class="d-block p-3 link-dark text-decoration-none">
+                    <li class="nav-item" id="menu3">
+                        <span>수강신청 안내</span>
+                    </li>
+                </a>
+                <a href="/html/subject_info.html" class="d-block p-3 link-dark text-decoration-none">
+                    <li class="nav-item" id="menu4">
+                        <span>과목정보보기</span>
+                    </li>
+                </a>
+                <a href="" class="d-block p-3 link-dark text-decoration-none">
+                    <li class="nav-item" id="lastSideMenu">
+                        <span></span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="wrapper container" id="secton1">
+            <div class="infoTitle">
+                <span class="title">수강신청하기</span>
+            </div>
+            <div>
+            </div>
+            <div class="infoContent" id="hideMenu1">
+                <hr>
+                <div>
+                    <div id="drop1">
+                        <div class="subTitle">
+                            <div id="showSubTitle1">
+                                <span class="drop_1"> </span>
+                                <span class="drop_1">▼수강신청 안내</span><br>
+                            </div>
+                            <div id="hideSubTitle1">
+                                <span class="drop_1">▶ </span>
+                                <span class="drop_1">수강신청 안내</span><br>
+                            </div>
+                        </div>
+                        <div class="subContent" id="subCon1">
+                            <span>* 해당 과목코드를 직접 입력하거나 과목을 선택하고</span>
+                            <span>수강신청 버튼을 누르세요.</span><br>
+                            <span>* 수강신청 창이 중복될 경우 시스템이 자동으로 종료됩니다.</span><br>
+                            <span>* 동일과목의 경우 해당 과목코드를 확인하세요.(자격에 부합하지 않으면 수강신청 불가능)</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="drop2">
+                        <div class="subTitle">
+                            <div id="showSubTitle2">
+                                <span class="drop_2"> </span>
+                                <span class="drop_2">▼과목코드 안내</span><br>
+                            </div>
+                            <div id="hideSubTitle2">
+                                <span class="drop_2">▶ </span>
+                                <span class="drop_2">과목코드 안내</span><br>
+                            </div>
+                        </div>
+                        <div class="subContent" id="subCon2">
+                            <span>* 교직원 과목코드: 4000~9999</span><br>
+                            <span>* 원어강의 과목코드: 4000~9999</span><br>
+                            <span>* 타대학 학점교류제 과목코드: 4000~9999</span><br>
+                            <span>* 교환학생 과목코드: 4000~9999</span><br>
+                            <span>* 교환학생 과목코드: 4000~9999</span><br>
+                            <span>* 교환학생 과목코드: 4000~9999</span><br>
+                            <span>* 교환학생 과목코드: 4000~9999</span><br>
+                            <span>* 교환학생 과목코드: 4000~9999</span><br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="drop3">
+                        <div class="subTitle">
+                            <div id="showSubTitle3">
+                                <span class="drop_3"> </span>
+                                <span class="drop_3">▼과목코드 검색하기</span><br>
+                            </div>
+                            <div id="hideSubTitle3">
+                                <span class="drop_3">▶ </span>
+                                <span class="drop_3">과목코드 검색하기</span><br>
+                            </div>
+                        </div>
+                        <div id="subCon3">
+                            <span>직접입력</span>
+                            <div class="row g-1">
+                                <div class="input-group mb-3" id="inputParent">
+                                    <button id="input" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">입력대상</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" id="item1" href="#">과목명</a></li>
+                                        <li><a class="dropdown-item" id="item2" href="#">교수명</a></li>
+                                        <li><a class="dropdown-item" id="item3" href="#">과목코드</a></li>
+                                        <li><a class="dropdown-item" id="item4" href="#">학과/학부</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                    </ul>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                    <button type="button" class="btn btn-outline-secondary">과목검색</button>
+                                </div>
+                            </div>
+
+                            <span>과목찾기</span>
+                            <div class="row g-3">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <select class="form-select" >
+                                            <option value="1" selected>1학기 정규학기</option>
+                                            <option value="2">2학기 정규학기</option>
+                                            <option value="3">여름 계절학기</option>
+                                            <option value="4">겨울 계절학기</option>
+                                        </select>
+                                        <label>학기</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <select class="form-select" >
+                                            <option value="1" selected>간호학과</option>
+                                            <option value="2">디자인학부</option>
+                                            <option value="3">생명공학과</option>
+                                            <option value="4">수학과</option>
+                                            <option value="5">식품영약학과</option>
+                                            <option value="6">인공지능/빅데이터 융합학부</option>
+                                            <option value="7">정보컴퓨터공학부</option>
+                                            <option value="8">통계학과</option>
+                                            <option value="9">환경공학과</option>
+                                        </select>
+                                        <label>학과</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <select class="form-select" >
+                                            <option value="1" selected>전공선택</option>
+                                            <option value="2">전공필수</option>
+                                            <option value="3">교양선택</option>
+                                            <option value="4">교양필수</option>
+                                        </select>
+                                        <label>과목유형</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <button type="button" id="longBtn" class="btn btn-outline-secondary">과목검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="subTitle" id="enroll">
+
+                    <div id="subCon4">
+                        <div><span>수강신청 시스템</span></div>
+                        <div><span>1차 수강신청 기간: </span></div>
+                        <div><span>1차 수강신청 기간: </span></div>
+                        <div><span>현재시간: </span></div>
+                        <div><button><span>수강신청 하러가기</span></button></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/js/jquery-3.6.0.min.js"></script>
+   <script>
+   
+   //해당 페이지로 접근한 url에 있는 파라미터의 value값 찾
+   		
+	   	let parameter = location.search.substr(1);
+	   	parameter = parameter.split("=");
+	   	
+	   	let paramName = parameter[0];
+		let paramValue = parameter[1];
+		
+   		
+ 	//로그인 상태에 따라 접근 가능 상태 알려주기 
+		$.ajax({
+			url:"/login/status",
+			type:"GET", //로그인 상태정보를 조회하는 것이므로 
+			dataType:"text",
+			success: function(Name){
+					if(Name!=undefined){					
+					}else{
+						alert("로그인 후 이용가능한 서비스 입니다. ");
+						let choice = confirm("로그인 페이지로 이동하시겠습니까? ");
+						console.log(choice);
+						//네 선택 시 로그인 화면으로 이동 
+						
+						if(choice){
+							location.href = "/html/login.html"
+						//아니오 선택 시 원래있던 페이지로 이동 
+						}else{
+							if(paramValue=="main"){
+								location.href = "http://localhost:8080/html/main.html"
+							}else if(paramValue=="sub"){
+								location.href = "http://localhost:8080/html/subject_info.html"
+							}else if(paramValue=="notice"){
+								location.href = "http://localhost:8080/html/notice.html"
+							}else if(paramValue=="login"){
+								location.href = "http://localhost:8080/html/login.html"
+							}else{
+								alert("error");
+							}
+						}
+		
+					}
+							
+				}//function
+		});
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+}
+main,footer{
+    margin-left: 7.5rem;
+}
+main{
+    margin-top: 6rem;
+}
+
+.wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.padding{
+    padding: 10px;
+}
+
+
+/*헤더*/
+header{
+    position: fixed;
+    top: 0px;
+    left: 8.7rem;
+    width: 100%;
+    z-index: 999;
+}
+#showoption,#hideoption{
+    width: 1.2rem!important;
+    height: 6rem;
+    color: white;
+    background-color: rgba(158, 176, 201);
+    position: fixed;
+    top: 0px;
+    left: 7.5em;
+    list-style: none;
+    z-index: 999;
+}
+a#showoption.link-dark.text-decoration-none li{
+   padding: 34px 0px 34px 0px!important;
+}
+a#hideoption.link-dark.text-decoration-none li{
+    padding: 34px 0px 34px 0px!important;
+}
+
+i.bi.bi-mortarboard-fill::before {
+    margin: 0px 20px;
+    font-size: 35px;
+    transform: translateY(4px);
+    color: white;
+}
+header.py-3.mb-4.border-bottom{
+    background-color: lightsteelblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px!important;
+    border-bottom: 0px!important;
+    height: 6rem;
+}
+.fs-4{
+    color: white;
+}
+span.fs-4{
+    font-size: 23px!important;
+}
+div.container.d-flex.flex-wrap.justify-content-center{
+    width: 100%;
+}
+.py-3 {
+padding-top: 1.5rem!important;
+padding-bottom: 1.5rem!important;
+}
+div.container.d-flex.flex-wrap.justify-content-center{
+    padding: 0px!important;
+    margin: 0px!important;
+    margin-left: 15px!important;
+    font-weight: bold;
+}
+
+
+/*사이드바*(nav)*/
+#side_bar{
+    position: fixed;
+    left: 0px;
+    top: 0rem;
+    z-index: 999;
+}
+
+#menu1{
+    color: white;
+    width: 7.5rem!important;
+    height: 6rem;
+    background-color: rgb(215, 215, 215);
+    padding: 18px 0px 18px 0px;
+}
+.bi.bi-bank2{
+    font-size: 25px;
+}
+#menu2,#menu3,#menu4{
+    color: white;
+    width: 7.5rem!important;
+    height: 6rem;
+    background-color: lightsteelblue;
+    padding: 38px 0px 38px 0px;
+}
+#menu2_1,#menu2_2,#menu2_3{
+    color: white;
+    /*border-bottom: solid white 1px;*/
+    width: 7.5rem;
+    height: 6rem;
+    background-color: rgb(215, 215, 215);
+    padding: 40px 0px 40px 0px;
+}
+#lastSideMenu{
+    width: 7.5rem;
+    background-color:lightsteelblue;
+    height: 42rem;
+}
+a.d-block.p-3.link-dark.text-decoration-none{
+    padding: 0px!important;
+}
+#menu1:hover,#menu2:hover,#menu3:hover,#menu4:hover,#menu2_1:hover,#menu2_2:hover,#menu2_3:hover{
+    background-color: rgba(158, 176, 201);
+}
+
+
+
+/*푸터*/
+p.text-center.text-muted{
+    margin-bottom: 0rem!important;
+}

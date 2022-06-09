@@ -1,0 +1,22 @@
+#findSub{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 100px;
+}
+span.title{
+    font-size: 30px;
+}
+div.infoTitle{
+    padding: 20px 0px 20px 0px;
+}
+#longBtn{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#go{
+    text-align: center;
+    margin: 70px 0px 20px 0px;
+}
+th span{
+    text-align: center;
+}
