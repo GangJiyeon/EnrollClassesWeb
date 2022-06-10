@@ -1,7 +1,6 @@
 package db;
 
 import java.sql.*;
-
 public class DBtool {
     public static Connection getConnection(){//사용빈도가 높아 static을 붙여서 클래스메서드로 만듦
         Connection conn = null;
@@ -19,7 +18,6 @@ public class DBtool {
         }
         return conn;
     }
-
     public static Statement getStatement(Connection conn){
         Statement stmt = null;
         try {
@@ -30,7 +28,6 @@ public class DBtool {
 
         return stmt;
     }
-
     public static PreparedStatement getPstmt(Connection conn, String sql){
         PreparedStatement pstmt = null;
         try {
@@ -40,7 +37,6 @@ public class DBtool {
         }
         return pstmt;
     }
-
     public static void closeResultSet(ResultSet rs){
         try{
             if(rs!=null){
@@ -50,7 +46,6 @@ public class DBtool {
             e.printStackTrace();
         }
     }
-
     public static void closeStmt(Statement stmt){
         try{
             if(stmt!=null){

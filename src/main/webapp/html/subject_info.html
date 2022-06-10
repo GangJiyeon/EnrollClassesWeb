@@ -92,7 +92,7 @@
         </div>
     </nav>
     <main>
-        <section class="wrapper container" id="secton1">
+        <section class="wrapper container" id="section1">
             <div class="infoTitle">
                 <span class="title">과목정보 검색하기</span>
             </div>
@@ -109,8 +109,8 @@
 		                                    <option value="과목코드">과목코드</option>
 		                                    <option value="학과/학부">학과/학부</option>
 		                                </select>
-	                          		<input type="text" name="searchSub" class="form-control" aria-label="Text input with dropdown button">
-	                          		<button type="submit" class="btn btn-outline-secondary">과목검색</button>
+	                          		<input type="text" id="searchSub" class="form-control" >
+	                          		<button type="submit" id="searchSubBtn1" class="btn btn-outline-secondary">과목검색</button>
 	                      		</div>
                 			</div>
                       	</form>
@@ -147,7 +147,8 @@
                             <div class="col-md">
                                 <div class="form-floating">
                                     <select class="form-select" name="subjectType" >
-                                        <option value="전공선택" selected>전공선택</option>
+                                        <option value="전공기초" selected>전공기초</option>
+                                        <option value="전공선택">전공선택</option>
                                         <option value="전공필수">전공필수</option>
                                         <option value="교양선택">교양선택</option>
                                         <option value="교양필수">교양필수</option>
@@ -158,12 +159,13 @@
                         </div>
                     <div class="col-md">
                         <div class="form-floating">
-                            <button type="submit" id="longBtn" class="btn btn-outline-secondary">과목검색</button>
+                            <button type="submit" id="searchSubBtn2" class="btn btn-outline-secondary">과목검색</button>
                         </div>
                     </div>
 
                     </form>
                 </div>
+            </div>
             <div class="infoContent">
                     <div id="go">
                         <span>▼</span><br>
@@ -171,41 +173,26 @@
                     </div>
                     <table class="table table-hover">
                         <thead>
-                            <tr>
-                              <th scope="col"><span>과목코드</span></th>
-                              <th scope="col"><span>과목명</span></th>
-                              <th scope="col"><span>교수</span></th>
-                              <th scope="col"><span>학점</span></th>
-                              <th scope="col"><span>수강인원</span></th>
-                              <th scope="col"><span>과목시간</span></th>
-                              <th scope="col"><span>강의실</span></th>
-                            </tr>
+                        <tr>
+                            <th scope="col">과목코드</th>
+                            <th scope="col">과목명</th>
+                            <th scope="col">과목타입</th>
+                            <th scope="col">교수명</th>
+                            <th scope="col">학점</th>
+                            <th scope="col">총수강인원</th>
+                            <th scope="col">강의실</th>
+                            <th scope="col">시간</th>
+                            <th scope="col">과목평점</th>
+                        </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">40001</th>
-                                <td>자료구조</td>
-                                <td>김한치</td>
-                                <td>4</td>
-                                <td>40</td>
-                                <td>월(09:00-12:00)</td>
-                                <td>3006</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">30001</th>
-                                <td>객체지향 프로그래밍</td>
-                                <td>강두치</td>
-                                <td>3</td>
-                                <td>30</td>
-                                <td>월(12:00-13:00), 화(12:00-13:00)</td>
-                                <td>3007</td>
-                            </tr>
-                        </tbody>   
+                        <tbody id="inputSubInfo">
+
+
+                        </tbody>
                     </table>
                 </div>
         </section>
-
-        <section class="wrapper container" id="secton2">
+        <section class="wrapper container" id="section2">
             <div class="infoTitle">
                 <span class="title">과목정보 전체보기</span>
             </div>
@@ -213,111 +200,24 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                          <th scope="col">과목코드</th>
-                          <th scope="col">과목명</th>
-                          <th scope="col">교수</th>
-                          <th scope="col">학점</th>
-                          <th scope="col">수강인원</th>
-                          <th scope="col">과목시간</th>
-                          <th scope="col">강의실</th>
+                            <th scope="col">과목코드</th>
+                            <th scope="col">과목명</th>
+                            <th scope="col">과목타입</th>
+                            <th scope="col">교수명</th>
+                            <th scope="col">학점</th>
+                            <th scope="col">총수강인원</th>
+                            <th scope="col">강의실</th>
+                            <th scope="col">시간</th>
+                            <th scope="col">과목평점</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr id="sub40001">
-                            <th scope="row">40001</th>
-                            <td>자료구조</td>
-                            <td>김한치</td>
-                            <td>4</td>
-                            <td>40</td>
-                            <td>월(09:00-12:00)</td>
-                            <td>3006</td>
-                        </tr>
-                        <tr id="sub30001">
-                            <th scope="row">30001</th>
-                            <td>객체지향 프로그래밍</td>
-                            <td>강두치</td>
-                            <td>3</td>
-                            <td>30</td>
-                            <td>월(12:00-13:00), 화(12:00-13:00)</td>
-                            <td>3007</td>
-                        </tr>
-                        <tr id="sub30002">
-                            <th scope="row">30002</th>
-                            <td>데이터 베이스</td>
-                            <td>이세치</td>
-                            <td>3</td>
-                            <td>30</td>
-                            <td>화(12:00-15:00)</td>
-                            <td>3008</td>
-                        </tr>
-                        <tr id="sub40002">
-                            <th scope="row">40002</th>
-                            <td>컴퓨터 알고리즘</td>
-                            <td>박네치</td>
-                            <td>4</td>
-                            <td>40</td>
-                            <td>금(14:00-17:00)</td>
-                            <td>3007</td>
-                        </tr>
-                        <tr id="sub30003">
-                            <th scope="row">30003</th>
-                            <td>임베디드 시스템</td>
-                            <td>김명치</td>
-                            <td>3</td>
-                            <td>30</td>
-                            <td>화(12:00-14:00), 목(12:00-14:00)</td>
-                            <td>3007</td>
-                        </tr>
-                        <tr id="sub20001">
-                            <th scope="row">20001</th>
-                            <td>인공지능</td>
-                            <td>제갈빵</td>
-                            <td>2</td>
-                            <td>20</td>
-                            <td>화(12:00-15:00)</td>
-                            <td>3009</td>
-                        </tr>
-                        
-                        
-                        <tr id="sub40003">
-                            <th scope="row">40003</th>
-                            <td>컴퓨터 보안</td>
-                            <td>제갈빵</td>
-                            <td>4</td>
-                            <td>40</td>
-                            <td>월(09:00-12:00)</td>
-                            <td>3009</td>
-                        </tr>
-                        <tr id="sub20002">
-                            <th scope="row">20002</th>
-                            <td>컴퓨터 그래픽스</td>
-                            <td>이정카</td>
-                            <td>2</td>
-                            <td>20</td>
-                            <td>화(12:00-13:30), 목(12:00-13:30)</td>
-                            <td>3010</td>
-                        </tr>
-                        <tr id="sub30004">
-                            <th scope="row">30004</th>
-                            <td>유닉스 시스템</td>
-                            <td>방뿌꾸</td>
-                            <td>3</td>
-                            <td>30</td>
-                            <td>금(12:00-15:00)</td>
-                            <td>3008</td>
-                        </tr>
-                        <tr id="sub80001">
-                            <th scope="row">80001</th>
-                            <td>러시아어</td>
-                            <td>니키타</td>
-                            <td>3</td>
-                            <td>80</td>
-                            <td>목(12:00-15:00)</td>
-                            <td>1010</td>
-                        </tr>
+                    <tbody id="totalSubInfo">
+
+
                     </tbody>
                 </table>
-            </section>
+            </div>
+        </section>
     
             </div>
             
@@ -328,9 +228,136 @@
    		
    		$(".infoTitle").css('cursor', 'pointer');
    		$("tr").css('cursor', 'pointer');
+        $("#searchSubBtn1").on("click", function (){
+            event.preventDefault();
+            let $searchType = $("select[name=searchType]");
+            let searchType = $searchType.val();
+            let $searchSub = $("#searchSub");
+            let searchSub = $searchSub.val();
+            searchSub = searchSub.replace(/\s/gi, "");
+            alert(searchSub);
+            $.ajax({
+                url:"/search/sub",
+                data: "searchType="+searchType+"&searchSub="+searchSub,
+                success: function (json){
+                    $(".result").remove();
+                    if(json == undefined){
+                        $("#inputSubInfo").append("<tr class=\"result\">\n" +
+                            "                            <td colspan=\"9\"><span>검색내역이 없습니다. </span></td>\n" +
+                            "                        </tr>")
+                    }else{
+                        let subInfoList = json.list;
 
-        $("pre").hide();
-   	 	
+                        for(let i=0; i<subInfoList.length; i++){
+                            let nthSubInfo = subInfoList[i];
+                            let sub_code = nthSubInfo.sub_code;
+                            let sub_name = nthSubInfo.sub_name;
+                            let sub_type = nthSubInfo.sub_type;
+                            let pro_name = nthSubInfo.pro_name;
+                            let grade = nthSubInfo.grade;
+                            let stu_num = nthSubInfo.stu_num;
+                            let major_stu_num = nthSubInfo.major_stu_num;
+                            let minor_stu_num = nthSubInfo.minor_stu_num;
+                            let general_stu_num = nthSubInfo.general_stu_num;
+                            let place = nthSubInfo.place;
+                            let time = nthSubInfo.time;
+                            let rating = nthSubInfo.rating;
+
+                            $("#inputSubInfo").append("<tr class=\"result\">\n" +
+                                "                            <th scope=\"row\">" + sub_code + "</th>\n" +
+                                "                            <td>" + sub_name + "</td>\n" +
+                                "                            <td>" + sub_type + "</td>\n" +
+                                "                            <td>" + pro_name + "</td>\n" +
+                                "                            <td>" + grade + "</td>\n" +
+                                "                            <td id=\"detailStuNum\"><div class=\"dropdown\"><div>" + stu_num + "</div><ul class=\"dropdown-menu\">\n" +
+                                                                                                                                    "  <li>전공인원: " + major_stu_num + "</li>\n" +
+                                                                                                                                    "  <li>부/복수전공인원: " + minor_stu_num + "</li>\n" +
+                                                                                                                                    "  <li>일반선택인원: " + general_stu_num + "</li>\n" +
+                                                                                                                                    "</ul></div></td>\n" +
+                                "                            <td>" + place + "</td>\n" +
+                                "                            <td>" + time + "</td>\n" +
+                                "                            <td>" + rating + "</td>\n" +
+                                "                        </tr>")
+                            $(".dropdown-menu").css('display', 'none');
+                            $(".dropdown").on("mouseenter", function (){
+                                $(".dropdown-menu").css('display', 'block');
+                            })
+                            $(".dropdown").on("mouseleave", function (){
+                                $(".dropdown-menu").css('display', 'none');
+                            })
+                        }
+                    }
+                },error: function (){
+                    alert("오류");
+                }
+            })
+        });
+
+        $("#searchSubBtn2").on("click", function (){
+            event.preventDefault();
+            let $semester = $("select[name=semester]");
+            let semester = $semester.val();
+            let $major = $("select[name=major]");
+            let major = $major.val();
+            let $subjectType = $("select[name=subjectType]");
+            let subjectType = $subjectType.val();
+
+            $.ajax({
+                url:"/search/sub",
+                data: "semester="+semester+"&major="+major+"&subjectType="+subjectType,
+                success: function (json){
+                    $(".result").remove();
+                    if(json == undefined){
+                        $("#inputSubInfo").append("<tr class=\"result\">\n" +
+                            "                            <td colspan=\"9\"><span>검색내역이 없습니다. </span></td>\n" +
+                            "                        </tr>")
+                    }else{
+                        let subInfoList = json.list;
+
+                        for(let i=0; i<subInfoList.length; i++){
+                            let nthSubInfo = subInfoList[i];
+                            let sub_code = nthSubInfo.sub_code;
+                            let sub_name = nthSubInfo.sub_name;
+                            let sub_type = nthSubInfo.sub_type;
+                            let pro_name = nthSubInfo.pro_name;
+                            let grade = nthSubInfo.grade;
+                            let stu_num = nthSubInfo.stu_num;
+                            let major_stu_num = nthSubInfo.major_stu_num;
+                            let minor_stu_num = nthSubInfo.minor_stu_num;
+                            let general_stu_num = nthSubInfo.general_stu_num;
+                            let place = nthSubInfo.place;
+                            let time = nthSubInfo.time;
+                            let rating = nthSubInfo.rating;
+
+                            $("#inputSubInfo").append("<tr class=\"result\">\n" +
+                                "                            <th scope=\"row\">" + sub_code + "</th>\n" +
+                                "                            <td>" + sub_name + "</td>\n" +
+                                "                            <td>" + sub_type + "</td>\n" +
+                                "                            <td>" + pro_name + "</td>\n" +
+                                "                            <td>" + grade + "</td>\n" +
+                                "                            <td id=\"detailStuNum\"><div class=\"dropdown\"><div>" + stu_num + "</div><ul class=\"dropdown-menu\">\n" +
+                                "  <li>전공인원: " + major_stu_num + "</li>\n" +
+                                "  <li>부/복수전공인원: " + minor_stu_num + "</li>\n" +
+                                "  <li>일반선택인원: " + general_stu_num + "</li>\n" +
+                                "</ul></div></td>\n" +
+                                "                            <td>" + place + "</td>\n" +
+                                "                            <td>" + time + "</td>\n" +
+                                "                            <td>" + rating + "</td>\n" +
+                                "                        </tr>")
+                            $(".dropdown-menu").css('display', 'none');
+                            $(".dropdown").on("mouseenter", function (){
+                                $(".dropdown-menu").css('display', 'block');
+                            })
+                            $(".dropdown").on("mouseleave", function (){
+                                $(".dropdown-menu").css('display', 'none');
+                            })
+                        }
+                    }
+                },error: function (){
+                    alert("오류");
+                }
+            })
+        });
 </script>
 	
     
