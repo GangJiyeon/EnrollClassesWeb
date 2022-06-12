@@ -321,14 +321,12 @@
         $("#goToEnroll").on("click", function (){
             clearInterval(updateDate);
             if(passAnswer=="pass"){
-                var enroll = window.open("http://localhost:8080/html/realEnroll.html", "PopupWin");
+
+                var enroll = window.open("http://localhost:8080/html/realEnroll.html", "PopupWin", "width=1000, height=2000");
 
             }else{
                 alert("수강신청 기간이 아닙니다. ");
             }
-
-
-
         })
    </script>
 </body>

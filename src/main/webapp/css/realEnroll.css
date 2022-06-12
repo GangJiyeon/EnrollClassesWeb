@@ -1,0 +1,8 @@
+body, studentInfo{
+    border: solid 1px black;
+}
+hr{
+    padding-top: 20px;
+    background: #e9eef6;
+    border: none;
+}
