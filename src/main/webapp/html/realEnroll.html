@@ -122,11 +122,9 @@
             <div>
                 <form action="/search/sub" method="GET">
                     <div class="row g-1">
-                        <div class="input-group mb-3" id="">
-                            <select class="form-select" name="enrollType">
-                                <option value="과목명" selected >과목명</option>
-                            </select>
-                            <input type="text" id="sudCode" class="form-control" >
+                        <div class="input-group mb-2" id="">
+
+                            <input type="text" id="subCode" class="form-control" placeholder="과목코드를 입력하세요">
                             <button type="submit" id="enrollBtn" class="btn btn-outline-secondary">수강신청</button>
                         </div>
                     </div>
@@ -137,6 +135,7 @@
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script>
 
+        let stu_code;
         //로그인 상태에 따른 화면 보여주기
         $.ajax({
             url:"/login/status",
@@ -146,12 +145,62 @@
 
                 if(Name!=undefined){
                     $("#form").prepend("<span id=\"user\">"+Name+"</span>");
+
+                    $.ajax({
+                        url:"/search/stu",
+                        type: "POST",
+                        success: function (json) {
+                            alert("학생정보받아옴")
+                            let stuInfoList = json.list;
+
+                            stuInfoList = stuInfoList[1];
+
+                                stu_code = stuInfoList.stu_code;
+                                let stu_name = stuInfoList.stu_name;
+                                let id = stuInfoList.id;
+                                let pw = stuInfoList.pw;
+                                let birthday = stuInfoList.birthday;
+                                let major = stuInfoList.major;
+                                let minor = stuInfoList.minor;
+                                let mobile = stuInfoList.mobile;
+                                let email = stuInfoList.email;
+                                let addr = stuInfoList.addr;
+                                let avg_grade = stuInfoList.avg_grade;
+                                let enterdate = stuInfoList.enterdate;
+                                let semester = stuInfoList.semester;
+
+
+                                $("#form").append("<br><span>" + stu_code +  "</span><br>")
+                                $("#form").append("<span>" + stu_name +  "</span><br>")
+                                $("#form").append("<span>" + id +  "</span><br>")
+                                $("#form").append("<span>" + pw +  "</span><br>")
+                                $("#form").append("<span>" + birthday +  "</span><br>")
+                                $("#form").append("<span>" + major +  "</span><br>")
+                                $("#form").append("<span>" + minor +  "</span><br>")
+                                $("#form").append("<span>" + mobile +  "</span><br>")
+                                $("#form").append("<span>" + email +  "</span><br>")
+                                $("#form").append("<span>" + addr +  "</span><br>")
+                                $("#form").append("<span>" + avg_grade +  "</span><br>")
+                                $("#form").append("<span>" + enterdate +  "</span><br>")
+                                $("#form").append("<span>" + semester +  "</span><br>")
+
+
+                        },
+                        error: function (){
+                            alert("학생정보 받아오기 실패")
+                        }
+                    })
+
+                    //학적 가지고 오기
                 }else{
                 }
             },
             error: function(){
+
             }
         });
+
+
 
         $("#searchSubBtn1").on("click", function (){
             event.preventDefault();
@@ -284,16 +333,17 @@
             })
         });
 
-        $("#enrollBtn").on("click", function (){
+        $("#enrollBtn").on("click", function (event){
             event.preventDefault();
 
-            let $sudCode = $("#sudCode");
-            let sudCode = $sudCode.val();
-            sudCode = sudCode.replace(/\s/gi, "");
-            alert(searchSub);
+            let $sub_code = $("#subCode");
+            let sub_code = $sub_code.val();
+            sub_code = sub_code.replace(/\s/gi, "");
+            alert(sub_code);
+            alert(stu_code);
             $.ajax({
                 url:"/enroll",
-                data: "sudCode="+sudCode,
+                data: "sub_code="+sub_code+"&stu_code="+stu_code,
                 success: function (){
 
 
